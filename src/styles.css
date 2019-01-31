@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+h1, h2, h3, h4, h5, p, li, td, th, a, span {
+    cursor:default;
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: whitesmoke; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white; 
+  }
