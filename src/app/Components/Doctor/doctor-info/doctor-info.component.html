@@ -1,3 +1,30 @@
-<p>
-  doctor-info  HI works!
-</p>
+<div class="container">
+  <h2 class="mb-2">Doctor Information</h2>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Doctor Name" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Hospital Name"
+      aria-describedby="basic-addon2">
+  </div>
+
+  <label for="basic-url">Mobile No</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control">
+  </div>
+
+  <label for="basic-url">Email ID</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control">
+  </div>
+
+  
+  <label for="basic-url">Doctor Reg No</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control">
+  </div>
+
+  <button type="button" class="btn btn-outline-success btn-lg btn-block" (click)="submitted = true">Submit</button>
+  <p *ngIf="submitted">Data Submitted</p>
+</div>
