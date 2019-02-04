@@ -23,6 +23,10 @@ export class SignComponent implements OnInit {
   sign() {
     if (this.username === 'admin' && this.password === 'admin') {
       this.app.sign = true;
+      localStorage.setItem('type', 'patients');
+    }
+    if (this.username === 'admin' && this.password === 'admin2') {
+      this.app.sign = true;
       localStorage.setItem('type', 'doctor');
     }
   }

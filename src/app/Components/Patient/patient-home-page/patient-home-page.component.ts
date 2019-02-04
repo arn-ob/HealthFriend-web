@@ -13,7 +13,8 @@ export class PatientHomePageComponent implements OnInit {
   mobileNo: any;
   nid: any;
   sex: any;
-
+  new_patients: any;
+  submitted: any;
 
   constructor(
     private route: Router,

@@ -16,6 +16,7 @@ export class DoctorInfoComponent implements OnInit {
   exp1: any;
   exp2: any;
   exp3: any;
+  submitted: any;
 
   constructor() { }
 

@@ -18,6 +18,7 @@ import { ReqService } from './service/req.service';
 import { HomepageComponent } from './homepage/homepage/homepage.component';
 import { SignComponent } from './sign/sign/sign.component';
 import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communication/doctor-communication.component';
+import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communi
     DetailsComponent,
     HomepageComponent,
     SignComponent,
-    DoctorCommunicationComponent
+    DoctorCommunicationComponent,
+    PatientsCheckupComponent
   ],
   imports: [
     BrowserModule,

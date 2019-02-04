@@ -1,9 +1,56 @@
 <div class="jumbotron">
   <h1 class="display-4">Patients Panel</h1>
   <p>Patients Reg System</p>
-  <a class="btn btn-primary btn-lg m-2" role="button" (click)="new_patients = true">New Patients</a>
-  <a class="btn btn-primary btn-lg m-2" href="#" role="button">Exisitand Patients</a>
+  <a class="btn btn-primary btn-lg m-2" role="button" (click)="new_patients = true">Patients New Admission</a>
+  <a class="btn btn-primary btn-lg m-2" href="#" role="button" routerLink="/patientsCheckup">Patients New Checkup</a>
 </div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col m-1">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Checkup ID 221</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
+          <p class="card-text">Doctor Messge</p>
+          <a class="card-link">Details View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col m-1">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Checkup ID 222</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
+          <p class="card-text">Doctor Messge</p>
+          <a class="card-link">Details View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col m-1">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Checkup ID 223</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
+          <p class="card-text">Doctor Messge</p>
+          <a class="card-link">Details View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col m-1">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Checkup ID 224</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
+          <p class="card-text">Doctor Messge</p>
+          <a class="card-link">Details View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="container" *ngIf="new_patients">
   <form>
@@ -33,7 +80,7 @@
         <option>female</option>
       </select>
     </div>
-    
+
     <button type="submit" class="btn btn-primary" (click)="submitHandler()">Submit</button>
     <p *ngIf="submitted">Submitted</p>
   </form>

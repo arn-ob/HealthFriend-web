@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HealthFriend';
-  sign = true;
+  sign = false;
 }
