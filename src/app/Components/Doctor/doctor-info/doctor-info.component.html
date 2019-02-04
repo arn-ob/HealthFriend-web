@@ -1,30 +1,52 @@
 <div class="container">
   <h2 class="mb-2">Doctor Information</h2>
+
+  <label for="basic-url">Doctor Name</label>
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Doctor Name" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" placeholder="Doctor Name" [(ngModel)]="doctorName" name="doctorName">
   </div>
 
+  <label for="basic-url">Address</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Address"
+    [(ngModel)]="address" name="address">
+  </div>
+
+  <label for="basic-url">District</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="District"
+    [(ngModel)]="district" name="district">
+  </div>
+
+  <label for="basic-url">Hospital Name</label>
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Hospital Name"
-      aria-describedby="basic-addon2">
+    [(ngModel)]="hospitalName" name="hospitalName">
   </div>
 
   <label for="basic-url">Mobile No</label>
   <div class="input-group mb-3">
-    <input type="text" class="form-control">
+    <input type="text" class="form-control"  placeholder="Mobile No"  [(ngModel)]="mobileNumber" name="mobileNumber" >
   </div>
 
   <label for="basic-url">Email ID</label>
   <div class="input-group mb-3">
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" placeholder="Email ID" [(ngModel)]="emailID" name="emailID">
   </div>
 
-  
   <label for="basic-url">Doctor Reg No</label>
   <div class="input-group mb-3">
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" placeholder="Doctor Reg No" [(ngModel)]="RegNo" name="RegNo">
   </div>
 
-  <button type="button" class="btn btn-outline-success btn-lg btn-block" (click)="submitted = true">Submit</button>
+  <label for="basic-url">Doctor Expert Area</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="exp1" name="exp1">
+    <input type="text" class="form-control" [(ngModel)]="exp2" name="exp2">
+    <input type="text" class="form-control" [(ngModel)]="exp3" name="exp3">
+  </div>
+
+  <button type="button" class="btn btn-outline-success btn-lg btn-block mb-4" (click)="submitHandler()">Submit</button>
   <p *ngIf="submitted">Data Submitted</p>
+
 </div>

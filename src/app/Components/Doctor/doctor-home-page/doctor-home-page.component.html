@@ -1,15 +1,13 @@
 <div class="jumbotron">
   <h1 class="display-4">Doctor Panel</h1>
   <p>Welcome Doctor Name</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button" routerLink="/DoctorInfo">Doctor Details</a>
+  <a class="btn btn-primary btn-lg" href="#" role="button" routerLink="/DoctorInfo">Add Doctor Details</a>
+  <br>
+  <button type="button" class="btn btn-primary mt-2" (click)="show1()">Patients List</button>
+  <button type="button" class="btn btn-primary ml-2 mt-2" (click)="show2()">Doctor Communication</button>
 </div>
 
-<button type="button" class="btn btn-primary m-2" (click)="patientsList = true">Patients List</button>
-<button type="button" class="btn btn-primary m-2" (click)="DoctorComm = true">Doctor Communication</button>
 
-<div class="container m-3">
-  Graph View
-</div>
 
 <div class="container" *ngIf="patientsList">
   <h3>Registered Patients List</h3>
@@ -20,6 +18,7 @@
         <th scope="col">Patients Name</th>
         <th scope="col">Checkup Type</th>
         <th scope="col">Checkup Date</th>
+        <th scope="col">Checkup Details</th>
       </tr>
     </thead>
     <tbody>
@@ -28,18 +27,21 @@
         <td>A</td>
         <td>TT</td>
         <td>2/12/2019</td>
+        <td><button type="button" class="btn btn-primary btn-sm m-2">Details</button></td>
       </tr>
       <tr>
         <th scope="row">2</th>
         <td>A</td>
         <td>TT</td>
         <td>2/12/2019</td>
+        <td><button type="button" class="btn btn-primary btn-sm m-2">Details</button></td>
       </tr>
       <tr>
         <th scope="row">3</th>
         <td>A</td>
         <td>TT</td>
         <td>2/12/2019</td>
+        <td><button type="button" class="btn btn-primary btn-sm m-2">Details</button></td>
       </tr>
     </tbody>
   </table>
@@ -47,42 +49,82 @@
 
 <div class="container" *ngIf="DoctorComm">
   <h3>Doctor Communication</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Doctor Name</th>
-        <th scope="col">Hospital Name</th>
-        <th scope="col">Place</th>
-        <th scope="col">Status</th>
-        <th scope="col">Call</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>A</td>
-        <td>B</td>
-        <td>TT</td>
-        <td>Online</td>
-        <td><button type="button" class="btn btn-primary m-2" >Call</button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>A</td>
-        <td>B</td>
-        <td>TT</td>
-        <td>Offline</td>
-        <td><button type="button" class="btn btn-primary m-2" disabled>Call</button></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>A</td>
-        <td>B</td>
-        <td>TT</td>
-        <td>Online</td>
-        <td><button type="button" class="btn btn-primary m-2" >Call</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-4">
+      <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Hospital Name</th>
+            <th scope="col">Place</th>
+            <th scope="col">Status</th>
+            <th scope="col">Call</th>
+            <th scope="col">Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>A</td>
+            <td>B</td>
+            <td>TT</td>
+            <td>Online</td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Call</button></td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Video Call</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>A</td>
+            <td>B</td>
+            <td>TT</td>
+            <td>Offline</td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Call</button></td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Video Call</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>A</td>
+            <td>B</td>
+            <td>TT</td>
+            <td>Online</td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Call</button></td>
+            <td><button type="button" class="btn btn-primary btn-sm m-2">Video Call</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
 </div>
+
+
+<div class="container m-3">
+  <h2>Statistics</h2>
+  <h3>Per Day Patints Data</h3>
+    <div class="row">
+      <div class="col">
+        <canvas height="50%" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+          [chartType]="barChartType"></canvas>
+      </div>
+    </div>
+
+    <h3>Per Day Prescription Generate</h3>
+    <div class="row mt-2">
+        <div class="col">
+          <canvas height="50%" baseChart [datasets]="barChartData2" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType"></canvas>
+        </div>
+      </div>
+  </div>
+
+  

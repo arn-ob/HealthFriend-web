@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { PatientHomePageComponent } from './Components/Patient/patient-home-page
 import { DoctorInfoComponent } from './Components/Doctor/doctor-info/doctor-info.component';
 import { AboutComponent } from './Components/About/about/about.component';
 import { DetailsComponent } from './Components/details/details.component';
+import { ReqService } from './service/req.service';
+import { HomepageComponent } from './homepage/homepage/homepage.component';
+import { SignComponent } from './sign/sign/sign.component';
+import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communication/doctor-communication.component';
 
 
 @NgModule({
@@ -24,16 +29,22 @@ import { DetailsComponent } from './Components/details/details.component';
     PatientHomePageComponent,
     DoctorInfoComponent,
     AboutComponent,
-    DetailsComponent
+    DetailsComponent,
+    HomepageComponent,
+    SignComponent,
+    DoctorCommunicationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // Here is the Router
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [
+    ReqService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
