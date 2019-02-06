@@ -5,6 +5,6 @@
     <span class="p-2 text-dark" routerLink="/Patients" *ngIf="isPatients">Patients</span>
     <span class="p-2 text-dark" routerLink="/About">About</span>
     <span class="p-2 text-dark" routerLink="/Details">Details</span>
-    <span class="p-2 text-dark" routerLink="/">Logout</span>
+    <span class="p-2 text-dark" (click)="logout()">Logout</span>
   </nav>
 </div>

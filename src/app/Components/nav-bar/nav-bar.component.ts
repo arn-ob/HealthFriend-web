@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +11,10 @@ export class NavBarComponent implements OnInit {
   isDoctor = false;
   isPatients = false;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private app: AppComponent
+  ) { }
 
   ngOnInit() {
     const a = localStorage.getItem('type');
@@ -19,6 +24,12 @@ export class NavBarComponent implements OnInit {
     if (a === 'patients') {
       this.isPatients = true;
     }
+  }
+
+  logout() {
+    localStorage.clear();
+    this.app.sign = false;
+    this.router.navigate(['/']);
   }
 
 }

@@ -8,6 +8,7 @@ import { AboutComponent } from './Components/About/about/about.component';
 import { DetailsComponent } from './Components/details/details.component';
 import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communication/doctor-communication.component';
 import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
+import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-dir.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'Doctor', component: DoctorHomePageComponent },
   { path: 'DoctorInfo', component: DoctorInfoComponent },
   { path: 'DoctorComm', component: DoctorCommunicationComponent },
+  { path: 'MedicineDir', component: MedicineDirComponent },
 
   // Other
   { path: 'About', component: AboutComponent },

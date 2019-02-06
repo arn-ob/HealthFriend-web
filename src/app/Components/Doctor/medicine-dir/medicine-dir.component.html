@@ -1,0 +1,26 @@
+<div class="container mt-3">
+  <p>Medicine Directory</p>
+  <input class="form-control" placeholder="Medicine Name" [(ngModel)]="name" name="name" (keyup)="get_by_name()" />
+</div>
+
+<div class="container mt-3" *ngIf="loading">
+  <h3>Medicine List</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Medicine Name</th>
+        <th scope="col">Concentration</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let return of medicineGetFromServer">
+        <th>{{return.medicine_id}}</th>
+        <td>{{return.medicine_name}}</td>
+        <td>{{return.concentration}}</td>
+        <td>{{return.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

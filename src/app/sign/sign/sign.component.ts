@@ -25,7 +25,7 @@ export class SignComponent implements OnInit {
       this.app.sign = true;
       localStorage.setItem('type', 'patients');
     }
-    if (this.username === 'admin' && this.password === 'admin2') {
+    if (this.username === 'admin2' && this.password === 'admin2') {
       this.app.sign = true;
       localStorage.setItem('type', 'doctor');
     }

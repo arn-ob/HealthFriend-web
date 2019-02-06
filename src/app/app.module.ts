@@ -19,6 +19,7 @@ import { HomepageComponent } from './homepage/homepage/homepage.component';
 import { SignComponent } from './sign/sign/sign.component';
 import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communication/doctor-communication.component';
 import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
+import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-dir.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/
     HomepageComponent,
     SignComponent,
     DoctorCommunicationComponent,
-    PatientsCheckupComponent
+    PatientsCheckupComponent,
+    MedicineDirComponent
   ],
   imports: [
     BrowserModule,
