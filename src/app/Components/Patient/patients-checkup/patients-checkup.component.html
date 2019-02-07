@@ -21,18 +21,18 @@
 </div>
 
 
-<div class="container" *ngIf="ECG">
-  ECG Info and Graph
+<div class="alert alert-primary m-3" *ngIf="ECG" (click)="ECG = false">
+  No ECG Info and Graph Available
 </div>
 
-<div class="container" *ngIf="EMG">
-  EMG Info and Graph
+<div class="alert alert-primary m-3" *ngIf="EMG" (click)="EMG = false">
+  No EMG Info and Graph Available
 </div>
 
-<div class="container" *ngIf="TEMP">
-  TEMP Info and Graph
+<div class="alert alert-primary m-3" *ngIf="TEMP" (click)="TEMP = false">
+  No TEMP Info and Graph Available
 </div>
 
-<div class="container" *ngIf="Body">
-  Body Info and Graph
+<div class="alert alert-primary m-3" *ngIf="Body" (click)="Body = false">
+  No Body Info and Graph Available
 </div>

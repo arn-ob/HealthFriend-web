@@ -5,7 +5,7 @@
   <a class="btn btn-primary btn-lg m-2" href="#" role="button" routerLink="/patientsCheckup">Patients New Checkup</a>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="!new_patients">
 
   <div class="row">
     <div class="col m-1">
@@ -52,7 +52,8 @@
 </div>
 
 
-<div class="container" *ngIf="new_patients">
+<div class="container mb-4" *ngIf="new_patients">
+  <h3>Patients New Admission</h3>
   <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Patients Name</label>
@@ -75,7 +76,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Sex</label>
-      <select [(ngModel)]="sex" name="sex">
+      <select class="form-control" [(ngModel)]="sex" name="sex">
         <option>Male</option>
         <option>female</option>
       </select>
