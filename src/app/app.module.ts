@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { SignComponent } from './sign/sign/sign.component';
 import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communication/doctor-communication.component';
 import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
 import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-dir.component';
+import { ReportViewComponent } from './Components/Doctor/report-view/report-view.component';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-
     SignComponent,
     DoctorCommunicationComponent,
     PatientsCheckupComponent,
-    MedicineDirComponent
+    MedicineDirComponent,
+    ReportViewComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    Ng2GoogleChartsModule
   ],
   providers: [
     ReqService
