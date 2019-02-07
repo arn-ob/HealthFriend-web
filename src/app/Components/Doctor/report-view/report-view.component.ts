@@ -17,6 +17,8 @@ export class ReportViewComponent implements OnInit {
   chartData3: any;
   gsr: any;
   hrm: any;
+  sp: any;
+  loading = false;
 
   constructor(
     private req: ReqService
@@ -26,6 +28,7 @@ export class ReportViewComponent implements OnInit {
     this.ECG_data();
     this.EMG_data();
     this.EMG_TEMP();
+    this.OtherDataGet();
   }
 
   // ECG Draw
@@ -126,10 +129,17 @@ export class ReportViewComponent implements OnInit {
     });
   }
 
-  DataGet(){
-    const sql = { 'sql': 'SELECT * FROM `health_friend_emg` ORDER BY `health_friend_emg`.`id` DESC limit 30' };
+  OtherDataGet() {
+    let data;
+    const sql = { 'sql': 'SELECT * FROM `health_friend_gsr`, health_friend_hrm ORDER BY `health_friend_hrm`.`id` DESC limit 1' };
     this.req.post_request(sql).then(res => {
-
-    })
+      data = res;
+    }).then(() => {
+      this.gsr = data[0].data;
+      this.hrm = data[0].data1;
+      this.sp = data[0].data2;
+    }).then(() => {
+      this.loading = true;
+    });
   }
 }

@@ -1,6 +1,7 @@
+<div *ngIf="loading">
 <div class="jumbotron">
   <h1 class="display-4">Doctor Report Panel</h1>
-  <p>Patients ID: 444</p>
+  <p>Patients ID</p>
   <br>
 </div>
 
@@ -17,9 +18,11 @@
   <div class="col-6">
     <google-chart #chart3 [data]="chartData3"></google-chart>
   </div>
-  <div class="col-6">
+  <div class="col-6 mt-4">
+    <p>Other Report</p>
       <input type="text" class="form-control" placeholder="GSR" [(ngModel)]="gsr" name="gsr">
       <input type="text" class="form-control" placeholder="HRM" [(ngModel)]="hrm" name="hrm">
       <input type="text" class="form-control" placeholder="SPo2" [(ngModel)]="sp" name="sp">
   </div>
+</div>
 </div>
