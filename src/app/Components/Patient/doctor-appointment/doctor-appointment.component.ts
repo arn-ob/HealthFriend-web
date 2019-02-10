@@ -9,6 +9,9 @@ export class DoctorAppointmentComponent implements OnInit {
   submittedA: any;
   submittedB: any;
   submittedC: any;
+  specialA: any;
+  specialB: any;
+  specialC: any;
   areaA: any;
   areaB: any;
   areaC: any;

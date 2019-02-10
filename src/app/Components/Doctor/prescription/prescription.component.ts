@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prescription.component.css']
 })
 export class PrescriptionComponent implements OnInit {
+  text = false;
+  doctorName: any;
+  checkupDetails: any;
+  medicineAssign: any;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  submitHandler() {
+    this.text = true;
+  }
 }

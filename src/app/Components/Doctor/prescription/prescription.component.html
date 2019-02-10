@@ -1,3 +1,37 @@
-<p>
-  prescription works!
-</p>
+<div class="container" *ngIf="!text">
+  <h2 class="mb-2">Doctor Prescription</h2>
+
+  <label for="basic-url">Doctor Name</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Doctor Name" [(ngModel)]="doctorName" name="doctorName">
+  </div>
+
+
+  <label for="basic-url">Checkup Details</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Checkup Details" [(ngModel)]="checkupDetails" name="checkupDetails">
+  </div>
+
+  <label for="basic-url">Medicine Assign</label>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Medicine Assign" [(ngModel)]="medicineAssign" name="medicineAssign">
+  </div>
+
+
+  <button type="button" class="btn btn-outline-success btn-lg btn-block mb-4" (click)="submitHandler()">Submit</button>
+  <p *ngIf="submitted">Generate</p>
+
+</div>
+
+<div *ngIf="text">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">{{doctorName}}</div>
+  </div>
+  <div class="container mt-3">
+      {{checkupDetails}}
+  </div>
+  <div class="container mt-3">
+      {{medicineAssign}}
+  </div>
+</div>
