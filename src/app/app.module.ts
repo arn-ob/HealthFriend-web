@@ -22,6 +22,9 @@ import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communi
 import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
 import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-dir.component';
 import { ReportViewComponent } from './Components/Doctor/report-view/report-view.component';
+import { DoctorAppointmentComponent } from './Components/Patient/doctor-appointment/doctor-appointment.component';
+import { ViewReportComponent } from './Components/Patient/view-report/view-report.component';
+import { PrescriptionComponent } from './Components/Doctor/prescription/prescription.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { ReportViewComponent } from './Components/Doctor/report-view/report-view
     DoctorCommunicationComponent,
     PatientsCheckupComponent,
     MedicineDirComponent,
-    ReportViewComponent
+    ReportViewComponent,
+    DoctorAppointmentComponent,
+    ViewReportComponent,
+    PrescriptionComponent
   ],
   imports: [
     BrowserModule,

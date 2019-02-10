@@ -28,5 +28,8 @@ export class PatientHomePageComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     const sql = { 'sql': 'CALL `info`("' + this.name + '", "' + this.address + '", "' + this.mobileNo + '", "' + this.nid + '", "' + this.sex + '")' };
   }
-
+  view(id) {
+    localStorage.setItem('checkupId', id);
+    this.route.navigate(['/viewReport']);
+  }
 }

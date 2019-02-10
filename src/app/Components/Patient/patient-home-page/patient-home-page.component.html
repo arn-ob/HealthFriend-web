@@ -3,6 +3,7 @@
   <p>Patients Reg System</p>
   <a class="btn btn-primary btn-lg m-2" role="button" (click)="new_patients = true">Patients New Admission</a>
   <a class="btn btn-primary btn-lg m-2" href="#" role="button" routerLink="/patientsCheckup">Patients New Checkup</a>
+   <a class="btn btn-primary btn-lg m-2" href="#" role="button" routerLink="/appointment">Doctor Appointment</a>
 </div>
 
 <div class="container" *ngIf="!new_patients">
@@ -14,7 +15,7 @@
           <h5 class="card-title">Checkup ID 221</h5>
           <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
           <p class="card-text">Doctor Messge</p>
-          <a class="card-link">Details View</a>
+          <a class="card-link" (click)="view('221')">Details View</a>
         </div>
       </div>
     </div>
@@ -24,7 +25,7 @@
           <h5 class="card-title">Checkup ID 222</h5>
           <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
           <p class="card-text">Doctor Messge</p>
-          <a class="card-link">Details View</a>
+          <a class="card-link" (click)="view('222')">Details View</a>
         </div>
       </div>
     </div>
@@ -34,7 +35,7 @@
           <h5 class="card-title">Checkup ID 223</h5>
           <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
           <p class="card-text">Doctor Messge</p>
-          <a class="card-link">Details View</a>
+          <a class="card-link" (click)="view('223')">Details View</a>
         </div>
       </div>
     </div>
@@ -44,7 +45,7 @@
           <h5 class="card-title">Checkup ID 224</h5>
           <h6 class="card-subtitle mb-2 text-muted">Checkup Name</h6>
           <p class="card-text">Doctor Messge</p>
-          <a class="card-link">Details View</a>
+          <a class="card-link" (click)="view('224')">Details View</a>
         </div>
       </div>
     </div>

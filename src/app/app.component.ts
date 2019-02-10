@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'HealthFriend';
-  sign = false;
+  sign;
 
   ngOnInit() {
     const a = localStorage.getItem('type');
     if (a !== null) {
       this.sign = true;
+    } else {
+      this.sign = false;
     }
   }
 }

@@ -10,6 +10,9 @@ import { DoctorCommunicationComponent } from './Components/Doctor/doctor-communi
 import { PatientsCheckupComponent } from './Components/Patient/patients-checkup/patients-checkup.component';
 import { MedicineDirComponent } from './Components/Doctor/medicine-dir/medicine-dir.component';
 import { ReportViewComponent } from './Components/Doctor/report-view/report-view.component';
+import { DoctorAppointmentComponent } from './Components/Patient/doctor-appointment/doctor-appointment.component';
+import { ViewReportComponent } from './Components/Patient/view-report/view-report.component';
+import { PrescriptionComponent } from './Components/Doctor/prescription/prescription.component';
 
 
 const routes: Routes = [
@@ -18,6 +21,8 @@ const routes: Routes = [
   // Patients
   { path: 'Patients', component: PatientHomePageComponent },
   { path: 'patientsCheckup', component: PatientsCheckupComponent },
+  { path: 'appointment', component: DoctorAppointmentComponent },
+  { path: 'viewReport', component: ViewReportComponent },
 
   // Doctor
   { path: 'Doctor', component: DoctorHomePageComponent },
@@ -25,6 +30,8 @@ const routes: Routes = [
   { path: 'DoctorComm', component: DoctorCommunicationComponent },
   { path: 'MedicineDir', component: MedicineDirComponent },
   { path: 'report', component: ReportViewComponent },
+  { path: 'report', component: ReportViewComponent },
+  { path: 'prescription', component: PrescriptionComponent },
 
   // Other
   { path: 'About', component: AboutComponent },
